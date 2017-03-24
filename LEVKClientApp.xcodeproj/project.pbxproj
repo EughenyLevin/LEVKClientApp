@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		617250341E8584F3001360C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250331E8584F3001360C2 /* main.m */; };
+		617250371E8584F3001360C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250361E8584F3001360C2 /* AppDelegate.m */; };
+		6172503A1E8584F3001360C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250391E8584F3001360C2 /* ViewController.m */; };
+		6172503D1E8584F3001360C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6172503B1E8584F3001360C2 /* Main.storyboard */; };
+		617250401E8584F3001360C2 /* LEVKClientApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6172503E1E8584F3001360C2 /* LEVKClientApp.xcdatamodeld */; };
+		617250421E8584F3001360C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617250411E8584F3001360C2 /* Assets.xcassets */; };
+		617250451E8584F3001360C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617250431E8584F3001360C2 /* LaunchScreen.storyboard */; };
+		617250501E8584F3001360C2 /* LEVKClientAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6172504F1E8584F3001360C2 /* LEVKClientAppTests.m */; };
+		6172505B1E8584F3001360C2 /* LEVKClientAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6172505A1E8584F3001360C2 /* LEVKClientAppUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6172504C1E8584F3001360C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 617250271E8584F3001360C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6172502E1E8584F3001360C2;
+			remoteInfo = LEVKClientApp;
+		};
+		617250571E8584F3001360C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 617250271E8584F3001360C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6172502E1E8584F3001360C2;
+			remoteInfo = LEVKClientApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6172502F1E8584F3001360C2 /* LEVKClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEVKClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		617250331E8584F3001360C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		617250351E8584F3001360C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		617250361E8584F3001360C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		617250381E8584F3001360C2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		617250391E8584F3001360C2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6172503C1E8584F3001360C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6172503F1E8584F3001360C2 /* LEVKClientApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LEVKClientApp.xcdatamodel; sourceTree = "<group>"; };
+		617250411E8584F3001360C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		617250441E8584F3001360C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		617250461E8584F3001360C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6172504B1E8584F3001360C2 /* LEVKClientAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LEVKClientAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6172504F1E8584F3001360C2 /* LEVKClientAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEVKClientAppTests.m; sourceTree = "<group>"; };
+		617250511E8584F3001360C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		617250561E8584F3001360C2 /* LEVKClientAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LEVKClientAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6172505A1E8584F3001360C2 /* LEVKClientAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEVKClientAppUITests.m; sourceTree = "<group>"; };
+		6172505C1E8584F3001360C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6172502C1E8584F3001360C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		617250481E8584F3001360C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		617250531E8584F3001360C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		617250261E8584F3001360C2 = {
+			isa = PBXGroup;
+			children = (
+				617250311E8584F3001360C2 /* LEVKClientApp */,
+				6172504E1E8584F3001360C2 /* LEVKClientAppTests */,
+				617250591E8584F3001360C2 /* LEVKClientAppUITests */,
+				617250301E8584F3001360C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		617250301E8584F3001360C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6172502F1E8584F3001360C2 /* LEVKClientApp.app */,
+				6172504B1E8584F3001360C2 /* LEVKClientAppTests.xctest */,
+				617250561E8584F3001360C2 /* LEVKClientAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		617250311E8584F3001360C2 /* LEVKClientApp */ = {
+			isa = PBXGroup;
+			children = (
+				617250351E8584F3001360C2 /* AppDelegate.h */,
+				617250361E8584F3001360C2 /* AppDelegate.m */,
+				617250381E8584F3001360C2 /* ViewController.h */,
+				617250391E8584F3001360C2 /* ViewController.m */,
+				6172503B1E8584F3001360C2 /* Main.storyboard */,
+				617250411E8584F3001360C2 /* Assets.xcassets */,
+				617250431E8584F3001360C2 /* LaunchScreen.storyboard */,
+				617250461E8584F3001360C2 /* Info.plist */,
+				6172503E1E8584F3001360C2 /* LEVKClientApp.xcdatamodeld */,
+				617250321E8584F3001360C2 /* Supporting Files */,
+			);
+			path = LEVKClientApp;
+			sourceTree = "<group>";
+		};
+		617250321E8584F3001360C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				617250331E8584F3001360C2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6172504E1E8584F3001360C2 /* LEVKClientAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				6172504F1E8584F3001360C2 /* LEVKClientAppTests.m */,
+				617250511E8584F3001360C2 /* Info.plist */,
+			);
+			path = LEVKClientAppTests;
+			sourceTree = "<group>";
+		};
+		617250591E8584F3001360C2 /* LEVKClientAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6172505A1E8584F3001360C2 /* LEVKClientAppUITests.m */,
+				6172505C1E8584F3001360C2 /* Info.plist */,
+			);
+			path = LEVKClientAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6172502E1E8584F3001360C2 /* LEVKClientApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6172505F1E8584F3001360C2 /* Build configuration list for PBXNativeTarget "LEVKClientApp" */;
+			buildPhases = (
+				6172502B1E8584F3001360C2 /* Sources */,
+				6172502C1E8584F3001360C2 /* Frameworks */,
+				6172502D1E8584F3001360C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LEVKClientApp;
+			productName = LEVKClientApp;
+			productReference = 6172502F1E8584F3001360C2 /* LEVKClientApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6172504A1E8584F3001360C2 /* LEVKClientAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 617250621E8584F3001360C2 /* Build configuration list for PBXNativeTarget "LEVKClientAppTests" */;
+			buildPhases = (
+				617250471E8584F3001360C2 /* Sources */,
+				617250481E8584F3001360C2 /* Frameworks */,
+				617250491E8584F3001360C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6172504D1E8584F3001360C2 /* PBXTargetDependency */,
+			);
+			name = LEVKClientAppTests;
+			productName = LEVKClientAppTests;
+			productReference = 6172504B1E8584F3001360C2 /* LEVKClientAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		617250551E8584F3001360C2 /* LEVKClientAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 617250651E8584F3001360C2 /* Build configuration list for PBXNativeTarget "LEVKClientAppUITests" */;
+			buildPhases = (
+				617250521E8584F3001360C2 /* Sources */,
+				617250531E8584F3001360C2 /* Frameworks */,
+				617250541E8584F3001360C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				617250581E8584F3001360C2 /* PBXTargetDependency */,
+			);
+			name = LEVKClientAppUITests;
+			productName = LEVKClientAppUITests;
+			productReference = 617250561E8584F3001360C2 /* LEVKClientAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		617250271E8584F3001360C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Eugheny_Levin;
+				TargetAttributes = {
+					6172502E1E8584F3001360C2 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 6AABQB8S42;
+						ProvisioningStyle = Automatic;
+					};
+					6172504A1E8584F3001360C2 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 6AABQB8S42;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6172502E1E8584F3001360C2;
+					};
+					617250551E8584F3001360C2 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 6AABQB8S42;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6172502E1E8584F3001360C2;
+					};
+				};
+			};
+			buildConfigurationList = 6172502A1E8584F3001360C2 /* Build configuration list for PBXProject "LEVKClientApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 617250261E8584F3001360C2;
+			productRefGroup = 617250301E8584F3001360C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6172502E1E8584F3001360C2 /* LEVKClientApp */,
+				6172504A1E8584F3001360C2 /* LEVKClientAppTests */,
+				617250551E8584F3001360C2 /* LEVKClientAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6172502D1E8584F3001360C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				617250451E8584F3001360C2 /* LaunchScreen.storyboard in Resources */,
+				617250421E8584F3001360C2 /* Assets.xcassets in Resources */,
+				6172503D1E8584F3001360C2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		617250491E8584F3001360C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		617250541E8584F3001360C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6172502B1E8584F3001360C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				617250401E8584F3001360C2 /* LEVKClientApp.xcdatamodeld in Sources */,
+				6172503A1E8584F3001360C2 /* ViewController.m in Sources */,
+				617250371E8584F3001360C2 /* AppDelegate.m in Sources */,
+				617250341E8584F3001360C2 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		617250471E8584F3001360C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				617250501E8584F3001360C2 /* LEVKClientAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		617250521E8584F3001360C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6172505B1E8584F3001360C2 /* LEVKClientAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6172504D1E8584F3001360C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6172502E1E8584F3001360C2 /* LEVKClientApp */;
+			targetProxy = 6172504C1E8584F3001360C2 /* PBXContainerItemProxy */;
+		};
+		617250581E8584F3001360C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6172502E1E8584F3001360C2 /* LEVKClientApp */;
+			targetProxy = 617250571E8584F3001360C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6172503B1E8584F3001360C2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6172503C1E8584F3001360C2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		617250431E8584F3001360C2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				617250441E8584F3001360C2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6172505D1E8584F3001360C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6172505E1E8584F3001360C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		617250601E8584F3001360C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6AABQB8S42;
+				INFOPLIST_FILE = LEVKClientApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "evgenylevin91-gmail.com.LEVKClientApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		617250611E8584F3001360C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6AABQB8S42;
+				INFOPLIST_FILE = LEVKClientApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "evgenylevin91-gmail.com.LEVKClientApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		617250631E8584F3001360C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6AABQB8S42;
+				INFOPLIST_FILE = LEVKClientAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "evgenylevin91-gmail.com.LEVKClientAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LEVKClientApp.app/LEVKClientApp";
+			};
+			name = Debug;
+		};
+		617250641E8584F3001360C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6AABQB8S42;
+				INFOPLIST_FILE = LEVKClientAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "evgenylevin91-gmail.com.LEVKClientAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LEVKClientApp.app/LEVKClientApp";
+			};
+			name = Release;
+		};
+		617250661E8584F3001360C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 6AABQB8S42;
+				INFOPLIST_FILE = LEVKClientAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "evgenylevin91-gmail.com.LEVKClientAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LEVKClientApp;
+			};
+			name = Debug;
+		};
+		617250671E8584F3001360C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 6AABQB8S42;
+				INFOPLIST_FILE = LEVKClientAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "evgenylevin91-gmail.com.LEVKClientAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LEVKClientApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6172502A1E8584F3001360C2 /* Build configuration list for PBXProject "LEVKClientApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6172505D1E8584F3001360C2 /* Debug */,
+				6172505E1E8584F3001360C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6172505F1E8584F3001360C2 /* Build configuration list for PBXNativeTarget "LEVKClientApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				617250601E8584F3001360C2 /* Debug */,
+				617250611E8584F3001360C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		617250621E8584F3001360C2 /* Build configuration list for PBXNativeTarget "LEVKClientAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				617250631E8584F3001360C2 /* Debug */,
+				617250641E8584F3001360C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		617250651E8584F3001360C2 /* Build configuration list for PBXNativeTarget "LEVKClientAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				617250661E8584F3001360C2 /* Debug */,
+				617250671E8584F3001360C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6172503E1E8584F3001360C2 /* LEVKClientApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6172503F1E8584F3001360C2 /* LEVKClientApp.xcdatamodel */,
+			);
+			currentVersion = 6172503F1E8584F3001360C2 /* LEVKClientApp.xcdatamodel */;
+			path = LEVKClientApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 617250271E8584F3001360C2 /* Project object */;
+}
