@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		610CF0841E89623E003D7284 /* LEUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF0831E89623E003D7284 /* LEUserViewController.m */; };
+		610CF0881E8981D5003D7284 /* LEUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF0871E8981D5003D7284 /* LEUserCell.m */; };
+		610CF08B1E898F3C003D7284 /* LECity.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF08A1E898F3C003D7284 /* LECity.m */; };
+		610CF0901E8ADDD4003D7284 /* LECounterCollctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF08F1E8ADDD4003D7284 /* LECounterCollctionCell.m */; };
+		610CF0931E8AE109003D7284 /* LECounterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF0921E8AE109003D7284 /* LECounterCell.m */; };
+		610CF0961E8AFC2B003D7284 /* LEUserCounters.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF0951E8AFC2A003D7284 /* LEUserCounters.m */; };
+		610CF0991E8C3705003D7284 /* LEPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF0981E8C3705003D7284 /* LEPostCell.m */; };
 		617250341E8584F3001360C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250331E8584F3001360C2 /* main.m */; };
 		617250371E8584F3001360C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250361E8584F3001360C2 /* AppDelegate.m */; };
 		6172503A1E8584F3001360C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250391E8584F3001360C2 /* ViewController.m */; };
@@ -56,6 +63,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		610CF0821E89623E003D7284 /* LEUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEUserViewController.h; sourceTree = "<group>"; };
+		610CF0831E89623E003D7284 /* LEUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEUserViewController.m; sourceTree = "<group>"; };
+		610CF0861E8981D5003D7284 /* LEUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEUserCell.h; sourceTree = "<group>"; };
+		610CF0871E8981D5003D7284 /* LEUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEUserCell.m; sourceTree = "<group>"; };
+		610CF0891E898F3C003D7284 /* LECity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECity.h; sourceTree = "<group>"; };
+		610CF08A1E898F3C003D7284 /* LECity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LECity.m; sourceTree = "<group>"; };
+		610CF08E1E8ADDD4003D7284 /* LECounterCollctionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECounterCollctionCell.h; sourceTree = "<group>"; };
+		610CF08F1E8ADDD4003D7284 /* LECounterCollctionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LECounterCollctionCell.m; sourceTree = "<group>"; };
+		610CF0911E8AE109003D7284 /* LECounterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECounterCell.h; sourceTree = "<group>"; };
+		610CF0921E8AE109003D7284 /* LECounterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LECounterCell.m; sourceTree = "<group>"; };
+		610CF0941E8AFC2A003D7284 /* LEUserCounters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEUserCounters.h; sourceTree = "<group>"; };
+		610CF0951E8AFC2A003D7284 /* LEUserCounters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEUserCounters.m; sourceTree = "<group>"; };
+		610CF0971E8C3705003D7284 /* LEPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEPostCell.h; sourceTree = "<group>"; };
+		610CF0981E8C3705003D7284 /* LEPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEPostCell.m; sourceTree = "<group>"; };
 		6172502F1E8584F3001360C2 /* LEVKClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEVKClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		617250331E8584F3001360C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		617250351E8584F3001360C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -143,6 +164,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		610CF0801E8961C9003D7284 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				617250A61E85B07D001360C2 /* LEAuthorizedViewController.h */,
+				617250A71E85B07D001360C2 /* LEAuthorizedViewController.m */,
+				617250A31E85AC70001360C2 /* LELoginViewController.h */,
+				617250A41E85AC70001360C2 /* LELoginViewController.m */,
+				610CF0821E89623E003D7284 /* LEUserViewController.h */,
+				610CF0831E89623E003D7284 /* LEUserViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		610CF0811E8961D4003D7284 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6172509A1E8598E5001360C2 /* LEServerManager.h */,
+				6172509B1E8598E5001360C2 /* LEServerManager.m */,
+				617250A01E85AB2E001360C2 /* LEAccessToken.h */,
+				617250A11E85AB2E001360C2 /* LEAccessToken.m */,
+				610CF0891E898F3C003D7284 /* LECity.h */,
+				610CF08A1E898F3C003D7284 /* LECity.m */,
+				610CF0941E8AFC2A003D7284 /* LEUserCounters.h */,
+				610CF0951E8AFC2A003D7284 /* LEUserCounters.m */,
+				6172509D1E85992D001360C2 /* LEUser.h */,
+				6172509E1E85992D001360C2 /* LEUser.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		610CF0851E8981B1003D7284 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				610CF0861E8981D5003D7284 /* LEUserCell.h */,
+				610CF0871E8981D5003D7284 /* LEUserCell.m */,
+				610CF08E1E8ADDD4003D7284 /* LECounterCollctionCell.h */,
+				610CF0971E8C3705003D7284 /* LEPostCell.h */,
+				610CF0981E8C3705003D7284 /* LEPostCell.m */,
+				610CF08F1E8ADDD4003D7284 /* LECounterCollctionCell.m */,
+				610CF0911E8AE109003D7284 /* LECounterCell.h */,
+				610CF0921E8AE109003D7284 /* LECounterCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		617250261E8584F3001360C2 = {
 			isa = PBXGroup;
 			children = (
@@ -170,18 +236,11 @@
 			children = (
 				617250351E8584F3001360C2 /* AppDelegate.h */,
 				617250361E8584F3001360C2 /* AppDelegate.m */,
+				610CF0851E8981B1003D7284 /* Cell */,
 				617250381E8584F3001360C2 /* ViewController.h */,
 				617250391E8584F3001360C2 /* ViewController.m */,
-				6172509A1E8598E5001360C2 /* LEServerManager.h */,
-				6172509B1E8598E5001360C2 /* LEServerManager.m */,
-				617250A31E85AC70001360C2 /* LELoginViewController.h */,
-				617250A41E85AC70001360C2 /* LELoginViewController.m */,
-				617250A61E85B07D001360C2 /* LEAuthorizedViewController.h */,
-				617250A71E85B07D001360C2 /* LEAuthorizedViewController.m */,
-				617250A01E85AB2E001360C2 /* LEAccessToken.h */,
-				617250A11E85AB2E001360C2 /* LEAccessToken.m */,
-				6172509D1E85992D001360C2 /* LEUser.h */,
-				6172509E1E85992D001360C2 /* LEUser.m */,
+				610CF0811E8961D4003D7284 /* Models */,
+				610CF0801E8961C9003D7284 /* Controllers */,
 				6172503B1E8584F3001360C2 /* Main.storyboard */,
 				617250411E8584F3001360C2 /* Assets.xcassets */,
 				617250431E8584F3001360C2 /* LaunchScreen.storyboard */,
@@ -407,8 +466,11 @@
 				6172508D1E859896001360C2 /* AFSecurityPolicy.m in Sources */,
 				6172509F1E85992D001360C2 /* LEUser.m in Sources */,
 				6172508F1E859896001360C2 /* AFURLResponseSerialization.m in Sources */,
+				610CF0961E8AFC2B003D7284 /* LEUserCounters.m in Sources */,
 				617250401E8584F3001360C2 /* LEVKClientApp.xcdatamodeld in Sources */,
 				6172503A1E8584F3001360C2 /* ViewController.m in Sources */,
+				610CF0931E8AE109003D7284 /* LECounterCell.m in Sources */,
+				610CF08B1E898F3C003D7284 /* LECity.m in Sources */,
 				617250A81E85B07D001360C2 /* LEAuthorizedViewController.m in Sources */,
 				6172508B1E859896001360C2 /* AFHTTPSessionManager.m in Sources */,
 				617250901E859896001360C2 /* AFURLSessionManager.m in Sources */,
@@ -416,17 +478,21 @@
 				617250941E859896001360C2 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				6172509C1E8598E5001360C2 /* LEServerManager.m in Sources */,
 				617250371E8584F3001360C2 /* AppDelegate.m in Sources */,
+				610CF0881E8981D5003D7284 /* LEUserCell.m in Sources */,
 				617250971E859896001360C2 /* UIProgressView+AFNetworking.m in Sources */,
 				6172508C1E859896001360C2 /* AFNetworkReachabilityManager.m in Sources */,
 				617250341E8584F3001360C2 /* main.m in Sources */,
+				610CF0991E8C3705003D7284 /* LEPostCell.m in Sources */,
 				617250931E859896001360C2 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				617250961E859896001360C2 /* UIImageView+AFNetworking.m in Sources */,
 				617250951E859896001360C2 /* UIButton+AFNetworking.m in Sources */,
 				617250981E859896001360C2 /* UIRefreshControl+AFNetworking.m in Sources */,
 				617250991E859896001360C2 /* UIWebView+AFNetworking.m in Sources */,
+				610CF0901E8ADDD4003D7284 /* LECounterCollctionCell.m in Sources */,
 				6172508E1E859896001360C2 /* AFURLRequestSerialization.m in Sources */,
 				617250911E859896001360C2 /* AFAutoPurgingImageCache.m in Sources */,
 				617250921E859896001360C2 /* AFImageDownloader.m in Sources */,
+				610CF0841E89623E003D7284 /* LEUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,6 +730,7 @@
 				617250611E8584F3001360C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		617250621E8584F3001360C2 /* Build configuration list for PBXNativeTarget "LEVKClientAppTests" */ = {
 			isa = XCConfigurationList;
@@ -672,6 +739,7 @@
 				617250641E8584F3001360C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		617250651E8584F3001360C2 /* Build configuration list for PBXNativeTarget "LEVKClientAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -680,6 +748,7 @@
 				617250671E8584F3001360C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

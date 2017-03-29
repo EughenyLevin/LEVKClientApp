@@ -36,6 +36,24 @@
         self.ID = [[data objectForKey:@"id"] integerValue];
         //self.photoMaxURL = [NSURL URLWithString:[data objectForKey:@"photo_max"]];
         
+        NSString *dateString = [data objectForKey:@"bdate"];
+        
+        NSDateFormatter  *dateFormatter = [NSDateFormatter new];
+        [dateFormatter setDateFormat:@"dd.MM.yyyy"];
+        
+        NSDate *date = [dateFormatter dateFromString:dateString];
+        self.longBDate = date;
+        
+        NSString *genderString = [data objectForKey:@"sex"];
+        if (genderString) self.sex = genderString;
+
+        
+        if (!date) {
+            [dateFormatter setDateFormat:@"dd.MM"];
+            date = [dateFormatter dateFromString:dateString];
+            self.shortBDate = date;
+        }
+        
     }
     
     return self;

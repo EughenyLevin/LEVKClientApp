@@ -11,6 +11,11 @@
 #import "LEUser.h"
 #import "LELoginViewController.h"
 #import "LEAccessToken.h"
+#import "LECity.h"
+#import "LEUserCounters.h"
+
+
+static NSString *responseKey = @"response";
 
 @interface LEServerManager ()
 
@@ -44,7 +49,7 @@
     }
     return self;
 }
-
+/*
 -(void)getUserWithID:(NSInteger)userID onSuccess:(void (^)(LEUser *))success onFailure:(void (^)(NSError *))failure{
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -57,7 +62,7 @@
                     progress:nil
                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                         
-                         NSLog(@"%@",responseObject);
+                         NSLog(@"Response: %@",responseObject);
                          
                      } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                          NSLog(@"%@",[error localizedDescription]);
@@ -65,6 +70,7 @@
     
     
 }
+ */
 -(void)authoriseOnScreen:(UIViewController *)screen onCompletion:(void (^)(NSInteger))handler{
     
     LELoginViewController *vc = [[LELoginViewController alloc] initWithcompletion:^(LEAccessToken *token) {
@@ -92,5 +98,89 @@
     
 }
 
+///////////////////////////////////--User page--////////////////////////////////////////////////
+/*
+-(void)getWallForUserID:(NSInteger)ID withOffset:(NSInteger)offset withCount:(NSInteger)count onSuccess:(void (^)(NSArray *, NSInteger))success onFailure:(void (^)(NSError *))failure{
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            @(ID),          @"owner_id",
+                            @(offset),      @"offset",
+                            @(count),       @"count",
+                            @"all",         @"filter",
+                            @1,             @"extended",
+                            @"first_name, last_name, online, photo_100, can_write_private_message", @"fields",
+                            self.token.token, @"access_token",
+                            @5.42,           @"v",
+                            nil];
+    
+    [self.sessionManager GET:@"wall.get"
+                  parameters:params progress:nil
+                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                         
+                         NSDictionary *responseDict = [responseObject objectForKey:@"response"];
+
+                         NSArray *itemsArray = [responseDict objectForKey:@"items"];
+                         NSArray *usersArray = [responseDict objectForKey:@"profiles"];
+                         NSArray *groupArray = [responseDict objectForKey:@"groups"];
+                        
+                         NSMutableArray* posts = [NSMutableArray array];
+                         
+                         for(NSDictionary *item in itemsArray){
+                         
+                             for (NSDictionary *item in usersArray) {
+                             
+                             //    LEUser *user = [[LEUser alloc]initWithDict:item];
+                             
+                                 
+                             }
+                         }
+                         if (success) {
+                             success(nil,[[responseDict objectForKey:@"count"]integerValue]);
+                         }
+                         
+                         
+                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                         
+                         NSLog(@"WALL ERROR! %@",[error localizedDescription]);
+                         
+                     }];
+    
+    
+    
+    
+}
+*/
+-(void)getInfoForUserWithID:(NSInteger)userID onSuccess:(void (^)(LEUser *))success onFailure:(void (^)(NSError *, NSInteger))failure{
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            @(userID), @"user_ids",
+                            @"photo_max, photo_100, bdate, city, online, counters, can_post, can_write_private_message",       @"fields",
+                            @"nom",                               @"name_case",
+                            self.token.token,                     @"access_token",nil];
+    
+    [self.sessionManager GET:@"users.get" parameters:params progress:nil
+                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                        
+                         NSArray *respArray = [responseObject objectForKey:@"response"];
+                         
+                         
+                         NSDictionary *responseUser = [respArray firstObject];
+                         LEUser *user  = [[LEUser alloc]initWithResponseForMScreen:responseUser];
+                         
+                         
+                         LEUserCounters *counters = [[LEUserCounters alloc]initWithData:[responseUser objectForKey:@"counters"]];
+                         
+                         user.counters = counters;
+                         
+                         if (success) success(user);
+                         
+                         
+                         
+                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                         
+                     }];
+    
+    
+}
 
 @end

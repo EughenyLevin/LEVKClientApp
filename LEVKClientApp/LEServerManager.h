@@ -25,4 +25,16 @@ typedef void(^LESuccessBlock)(LEUser *user);
 -(void)authoriseOnScreen:(UIViewController*)screen
             onCompletion:(void(^)(NSInteger userID))handler;
 
+
+-(void) getWallForUserID:(NSInteger)ID
+              withOffset:(NSInteger)offset
+               withCount:(NSInteger)count
+               onSuccess:(void(^)(NSArray* posts, NSInteger count))success
+               onFailure:(void(^)(NSError *error))failure;
+
+
+-(void)getInfoForUserWithID:(NSInteger)userID
+                  onSuccess:(void(^)(LEUser *user))success
+                  onFailure:(void(^)(NSError *error, NSInteger errorCode))failure;
+
 @end

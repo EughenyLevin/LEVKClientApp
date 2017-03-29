@@ -48,7 +48,7 @@
                   "redirect_uri=https://api.vk.com/blank.html&"
                   "display=mobile&"
                   "scope=friends,photos,audio,video,wall,groups,offline,messages&"
-                  "response_type=token&"
+                  "response_type=token&revoke=1&"
                   
                   "v=5.42&"];
     
@@ -66,7 +66,7 @@
         LEAccessToken* token = [[LEAccessToken alloc] init];
         
         NSString* query = [[request URL] description];
-        
+        NSLog(@"ACCESS: %@",query);
         NSArray* array = [query componentsSeparatedByString:@"#"];
         
         if (array.count > 1) {

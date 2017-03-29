@@ -8,6 +8,7 @@
 
 #import "LEAuthorizedViewController.h"
 #import "LEServerManager.h"
+#import "LEUserViewController.h"
 @interface LEAuthorizedViewController ()
 
 @end
@@ -17,18 +18,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+  
+    
+    self.navigationItem.hidesBackButton = YES;
     
     [[LEServerManager sharedManager]authoriseOnScreen:self onCompletion:^(NSInteger userID) {
         
-        NSLog(@"USERID: %ld",userID);
+        
+          NSLog(@"USERID: %ld",userID);
+        
+        //self.r.leftViewController = nil;
+
+        LEUserViewController *userVc = [self.storyboard instantiateViewControllerWithIdentifier:@"fullInfoVC"];
+        userVc.userID = userID;
+        
+         [self.navigationController setViewControllers:@[userVc] animated:YES];
         
     }];
+    
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self setNeedsStatusBarAppearanceUpdate];
     
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 /*
