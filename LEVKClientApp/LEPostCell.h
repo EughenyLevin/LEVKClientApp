@@ -13,5 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *postText;
 @property (weak, nonatomic) IBOutlet UILabel *posDate;
 @property (weak, nonatomic) IBOutlet UILabel *postLikes;
+@property (weak, nonatomic) IBOutlet UILabel *fromUser;
+@property (weak, nonatomic) IBOutlet UIImageView *authorPhoto;
+@property (weak, nonatomic) IBOutlet UIButton *likeButton;
 
 @end

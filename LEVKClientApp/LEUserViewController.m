@@ -12,7 +12,12 @@
 #import "UIImageView+AFNetworking.h"
 #import "LEUser.h"
 #import "LECounterCell.h"
+#import "LEPostCell.h"
+#import "LEPost.h"
+#import "LEWallImage.h"
 
+
+static CGFloat height = 4;
 
 @interface LEUserViewController ()
 
@@ -25,19 +30,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    NSLog(@"ID  = %ld",_userID);
+    self.postsArray = [NSMutableArray array];
+    [self setNavigationBarStyle];
+    
     [self getUserInfoWithCompletion:^(BOOL state) {
       
+        
     }];
     
-    
-    
-    
-   // [self getWallWithCompletion:^(BOOL state) {
-    
-    //}];
+    [self getWallWithCompletion:^(BOOL state) {
+        
+        if (state) {
+            [self.tableView setHidden:NO];
+        }
+    }];
+
+  
   }
+
+-(void)viewDidAppear:(BOOL)animated{
+    
+    [super viewDidAppear:animated];
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -52,7 +69,9 @@
             self.currentUser = user;
             [self.tableView reloadData];
             
-           
+            if (completion) {
+                completion(YES);
+            }
             
             }
     onFailure:^(NSError *error, NSInteger errorCode) {
@@ -69,7 +88,9 @@
       withCount:100
       onSuccess:^(NSArray *posts, NSInteger count) {
           
-          NSLog(@"SUCCESS!");
+          [self.postsArray addObjectsFromArray: posts];
+          [self.tableView reloadData];
+          NSLog(@"_postsArray: %ld",_postsArray.count);
           
       } onFailure:^(NSError *error) {
           
@@ -92,7 +113,7 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return 3;
 }
 
 
@@ -100,6 +121,7 @@
     
     static NSString *profileCellID = @"profileCell";
     static NSString *counterCellID = @"counterCell";
+    static NSString *postcellID    = @"postCell";
  
     if (indexPath.section == 0){
     
@@ -144,7 +166,7 @@
         
     }
 
-    else {
+    else if (indexPath.section == 1){
             
             LECounterCell *counterCell = (LECounterCell*)[tableView dequeueReusableCellWithIdentifier:counterCellID];
             
@@ -159,10 +181,38 @@
         
         return counterCell;
     }
-    
+    else {
+        
+        LEPostCell *postCell = (LEPostCell*)[tableView dequeueReusableCellWithIdentifier:postcellID];
+        if (!postCell) {
+            postCell = [[LEPostCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:postcellID];
+        }
+            if (self.postsArray.count) {
 
-    
+            LEPost *post = [self.postsArray objectAtIndex:indexPath.row];
+                if (post.text) {
+                    
+                    NSDateFormatter *df = [NSDateFormatter new];
+                    [df setDateFormat:@"dd.mm.yy"];
+                    postCell.posDate.text  = [df stringFromDate: post.date];
+                    postCell.postText.text = post.text;
+                    NSString *postAuthor = [NSString stringWithFormat:@"%@ %@",post.source.firstName, post.source.lastName];
+                    
+                    postCell.fromUser.text = postAuthor;
+                    LEWallImage *image = [post.photos objectAtIndex:indexPath.row];
+                    [postCell.postView setImageWithURL:image.photo130];
+                    [postCell.authorPhoto setImageWithURL:post.source.photo100URL];
+                    postCell.postLikes.text = [NSString stringWithFormat:@"%ld",post.like.likesCount];
+                    
+                }
+                else NSLog(@"ALERT!!!");
+        }
+        
+        return postCell;
+        
+    }
 }
+
 
 #pragma mark - UITableViewDelegate
 
@@ -171,5 +221,45 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+   
+    
+    switch (indexPath.section) {
+        case 0: return 120;
+        case 1: return 50;
+        case 2: return 300;
+            
+        default:
+            break;
+    }
+    return 0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    return height;
+    
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    
+    return height;
+    
+}
+
+- (IBAction)onLikeButClick:(id)sender {
+    
+    
+}
+#pragma mark - UINavigationBar gradient -
+
+
+-(void)setNavigationBarStyle{
+    
+    UIColor *barTintColor = [UIColor colorWithRed:64/256 green:86/256 blue:106/256 alpha:1];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.tintColor = barTintColor;
+    self.navigationController.navigationBar.backgroundColor =  [UIColor redColor];
+}
+
 
 @end

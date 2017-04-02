@@ -14,6 +14,9 @@
 		610CF0931E8AE109003D7284 /* LECounterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF0921E8AE109003D7284 /* LECounterCell.m */; };
 		610CF0961E8AFC2B003D7284 /* LEUserCounters.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF0951E8AFC2A003D7284 /* LEUserCounters.m */; };
 		610CF0991E8C3705003D7284 /* LEPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF0981E8C3705003D7284 /* LEPostCell.m */; };
+		610CF09F1E8C40F6003D7284 /* LEWallObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF09E1E8C40F6003D7284 /* LEWallObject.m */; };
+		610CF0A61E8C41FE003D7284 /* LEPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF0A51E8C41FE003D7284 /* LEPost.m */; };
+		610CF0A91E8C4A95003D7284 /* LEWallImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF0A81E8C4A95003D7284 /* LEWallImage.m */; };
 		617250341E8584F3001360C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250331E8584F3001360C2 /* main.m */; };
 		617250371E8584F3001360C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250361E8584F3001360C2 /* AppDelegate.m */; };
 		6172503A1E8584F3001360C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250391E8584F3001360C2 /* ViewController.m */; };
@@ -43,6 +46,10 @@
 		617250A21E85AB2E001360C2 /* LEAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250A11E85AB2E001360C2 /* LEAccessToken.m */; };
 		617250A51E85AC70001360C2 /* LELoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250A41E85AC70001360C2 /* LELoginViewController.m */; };
 		617250A81E85B07D001360C2 /* LEAuthorizedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250A71E85B07D001360C2 /* LEAuthorizedViewController.m */; };
+		61D55F901E914C1800DA881D /* LEParentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55F8F1E914C1800DA881D /* LEParentObject.m */; };
+		61D55F931E9172AE00DA881D /* LELike.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55F921E9172AE00DA881D /* LELike.m */; };
+		61D55F971E9178DB00DA881D /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 61D55F961E9178DB00DA881D /* images.png */; };
+		61D55F9B1E918F2500DA881D /* LEBarGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55F9A1E918F2500DA881D /* LEBarGradient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +84,12 @@
 		610CF0951E8AFC2A003D7284 /* LEUserCounters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEUserCounters.m; sourceTree = "<group>"; };
 		610CF0971E8C3705003D7284 /* LEPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEPostCell.h; sourceTree = "<group>"; };
 		610CF0981E8C3705003D7284 /* LEPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEPostCell.m; sourceTree = "<group>"; };
+		610CF09D1E8C40F6003D7284 /* LEWallObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEWallObject.h; sourceTree = "<group>"; };
+		610CF09E1E8C40F6003D7284 /* LEWallObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEWallObject.m; sourceTree = "<group>"; };
+		610CF0A41E8C41FE003D7284 /* LEPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEPost.h; sourceTree = "<group>"; };
+		610CF0A51E8C41FE003D7284 /* LEPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEPost.m; sourceTree = "<group>"; };
+		610CF0A71E8C4A95003D7284 /* LEWallImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEWallImage.h; sourceTree = "<group>"; };
+		610CF0A81E8C4A95003D7284 /* LEWallImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEWallImage.m; sourceTree = "<group>"; };
 		6172502F1E8584F3001360C2 /* LEVKClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEVKClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		617250331E8584F3001360C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		617250351E8584F3001360C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -137,6 +150,13 @@
 		617250A41E85AC70001360C2 /* LELoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LELoginViewController.m; sourceTree = "<group>"; };
 		617250A61E85B07D001360C2 /* LEAuthorizedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEAuthorizedViewController.h; sourceTree = "<group>"; };
 		617250A71E85B07D001360C2 /* LEAuthorizedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEAuthorizedViewController.m; sourceTree = "<group>"; };
+		61D55F8E1E914C1800DA881D /* LEParentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEParentObject.h; sourceTree = "<group>"; };
+		61D55F8F1E914C1800DA881D /* LEParentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEParentObject.m; sourceTree = "<group>"; };
+		61D55F911E9172AE00DA881D /* LELike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LELike.h; sourceTree = "<group>"; };
+		61D55F921E9172AE00DA881D /* LELike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LELike.m; sourceTree = "<group>"; };
+		61D55F961E9178DB00DA881D /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = images.png; path = Images/images.png; sourceTree = SOURCE_ROOT; };
+		61D55F991E918F2500DA881D /* LEBarGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEBarGradient.h; sourceTree = "<group>"; };
+		61D55F9A1E918F2500DA881D /* LEBarGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEBarGradient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +210,7 @@
 				610CF0951E8AFC2A003D7284 /* LEUserCounters.m */,
 				6172509D1E85992D001360C2 /* LEUser.h */,
 				6172509E1E85992D001360C2 /* LEUser.m */,
+				610CF0A01E8C41C1003D7284 /* WallModels */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -207,6 +228,23 @@
 				610CF0921E8AE109003D7284 /* LECounterCell.m */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		610CF0A01E8C41C1003D7284 /* WallModels */ = {
+			isa = PBXGroup;
+			children = (
+				610CF09D1E8C40F6003D7284 /* LEWallObject.h */,
+				610CF09E1E8C40F6003D7284 /* LEWallObject.m */,
+				610CF0A41E8C41FE003D7284 /* LEPost.h */,
+				610CF0A51E8C41FE003D7284 /* LEPost.m */,
+				61D55F911E9172AE00DA881D /* LELike.h */,
+				61D55F921E9172AE00DA881D /* LELike.m */,
+				610CF0A71E8C4A95003D7284 /* LEWallImage.h */,
+				610CF0A81E8C4A95003D7284 /* LEWallImage.m */,
+				61D55F8E1E914C1800DA881D /* LEParentObject.h */,
+				61D55F8F1E914C1800DA881D /* LEParentObject.m */,
+			);
+			name = WallModels;
 			sourceTree = "<group>";
 		};
 		617250261E8584F3001360C2 = {
@@ -234,6 +272,8 @@
 		617250311E8584F3001360C2 /* LEVKClientApp */ = {
 			isa = PBXGroup;
 			children = (
+				61D55F981E918F0B00DA881D /* Style */,
+				61D55F951E9178B200DA881D /* Images */,
 				617250351E8584F3001360C2 /* AppDelegate.h */,
 				617250361E8584F3001360C2 /* AppDelegate.m */,
 				610CF0851E8981B1003D7284 /* Cell */,
@@ -301,6 +341,7 @@
 		617250761E859896001360C2 /* UIKit+AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				61D55F941E91788C00DA881D /* Images */,
 				617250771E859896001360C2 /* AFAutoPurgingImageCache.h */,
 				617250781E859896001360C2 /* AFAutoPurgingImageCache.m */,
 				617250791E859896001360C2 /* AFImageDownloader.h */,
@@ -324,6 +365,31 @@
 			);
 			name = "UIKit+AFNetworking";
 			path = "LEVKClientApp/UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		61D55F941E91788C00DA881D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		61D55F951E9178B200DA881D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				61D55F961E9178DB00DA881D /* images.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		61D55F981E918F0B00DA881D /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				61D55F991E918F2500DA881D /* LEBarGradient.h */,
+				61D55F9A1E918F2500DA881D /* LEBarGradient.m */,
+			);
+			name = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +504,7 @@
 				617250451E8584F3001360C2 /* LaunchScreen.storyboard in Resources */,
 				617250421E8584F3001360C2 /* Assets.xcassets in Resources */,
 				6172503D1E8584F3001360C2 /* Main.storyboard in Resources */,
+				61D55F971E9178DB00DA881D /* images.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,13 +530,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				617250A21E85AB2E001360C2 /* LEAccessToken.m in Sources */,
+				610CF09F1E8C40F6003D7284 /* LEWallObject.m in Sources */,
 				6172508D1E859896001360C2 /* AFSecurityPolicy.m in Sources */,
 				6172509F1E85992D001360C2 /* LEUser.m in Sources */,
+				610CF0A61E8C41FE003D7284 /* LEPost.m in Sources */,
 				6172508F1E859896001360C2 /* AFURLResponseSerialization.m in Sources */,
 				610CF0961E8AFC2B003D7284 /* LEUserCounters.m in Sources */,
 				617250401E8584F3001360C2 /* LEVKClientApp.xcdatamodeld in Sources */,
 				6172503A1E8584F3001360C2 /* ViewController.m in Sources */,
 				610CF0931E8AE109003D7284 /* LECounterCell.m in Sources */,
+				61D55F9B1E918F2500DA881D /* LEBarGradient.m in Sources */,
 				610CF08B1E898F3C003D7284 /* LECity.m in Sources */,
 				617250A81E85B07D001360C2 /* LEAuthorizedViewController.m in Sources */,
 				6172508B1E859896001360C2 /* AFHTTPSessionManager.m in Sources */,
@@ -477,6 +547,7 @@
 				617250A51E85AC70001360C2 /* LELoginViewController.m in Sources */,
 				617250941E859896001360C2 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				6172509C1E8598E5001360C2 /* LEServerManager.m in Sources */,
+				61D55F931E9172AE00DA881D /* LELike.m in Sources */,
 				617250371E8584F3001360C2 /* AppDelegate.m in Sources */,
 				610CF0881E8981D5003D7284 /* LEUserCell.m in Sources */,
 				617250971E859896001360C2 /* UIProgressView+AFNetworking.m in Sources */,
@@ -492,6 +563,8 @@
 				6172508E1E859896001360C2 /* AFURLRequestSerialization.m in Sources */,
 				617250911E859896001360C2 /* AFAutoPurgingImageCache.m in Sources */,
 				617250921E859896001360C2 /* AFImageDownloader.m in Sources */,
+				610CF0A91E8C4A95003D7284 /* LEWallImage.m in Sources */,
+				61D55F901E914C1800DA881D /* LEParentObject.m in Sources */,
 				610CF0841E89623E003D7284 /* LEUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

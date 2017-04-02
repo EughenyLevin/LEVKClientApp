@@ -13,6 +13,7 @@
 #import "LEAccessToken.h"
 #import "LECity.h"
 #import "LEUserCounters.h"
+#import "LEPost.h"
 
 
 static NSString *responseKey = @"response";
@@ -99,7 +100,7 @@ static NSString *responseKey = @"response";
 }
 
 ///////////////////////////////////--User page--////////////////////////////////////////////////
-/*
+
 -(void)getWallForUserID:(NSInteger)ID withOffset:(NSInteger)offset withCount:(NSInteger)count onSuccess:(void (^)(NSArray *, NSInteger))success onFailure:(void (^)(NSError *))failure{
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -119,23 +120,50 @@ static NSString *responseKey = @"response";
                          
                          NSDictionary *responseDict = [responseObject objectForKey:@"response"];
 
+                         //NSLog(@"responseDict: %@",responseDict);
+                         
+                         
                          NSArray *itemsArray = [responseDict objectForKey:@"items"];
                          NSArray *usersArray = [responseDict objectForKey:@"profiles"];
-                         NSArray *groupArray = [responseDict objectForKey:@"groups"];
+                         NSArray *likesArray = [responseDict objectForKey:@"likes"];
                         
+                         for (NSDictionary *d in itemsArray) {
+                             NSLog(@"%@ sdfgnfdlglfdgndlfgndf",d);
+                         }
+                         
                          NSMutableArray* posts = [NSMutableArray array];
                          
                          for(NSDictionary *item in itemsArray){
-                         
-                             for (NSDictionary *item in usersArray) {
+                       
+                             LEPost *post = [[LEPost alloc]initWithItem:item];
+                             LELike *like = [LELike new];
+                             like.likesCount = [[[item objectForKey:@"likes"]objectForKey:@"count"]integerValue];
+                             post.like = like;
                              
-                             //    LEUser *user = [[LEUser alloc]initWithDict:item];
-                             
+                             for (NSDictionary *profile in usersArray) {
+                                 
+                                 LEPost *requredPost = nil;
+                                 
+                                 if ([[profile objectForKey:@"id"]integerValue]==post.fromID) {
+                                     requredPost = post;
+                                 }
+                                 
+                                 if (requredPost) {
+                                     LEUser *fromUser = [[LEUser alloc]initWithDict:profile];
+                                     requredPost.source = (LEParentObject*)fromUser;
+                                   
+                                 }
                                  
                              }
+                             
+                             
+                             [posts addObject:post];
+                             
+                           
                          }
+                         
                          if (success) {
-                             success(nil,[[responseDict objectForKey:@"count"]integerValue]);
+                             success(posts,[[responseDict objectForKey:@"count"]integerValue]);
                          }
                          
                          
@@ -149,7 +177,7 @@ static NSString *responseKey = @"response";
     
     
 }
-*/
+
 -(void)getInfoForUserWithID:(NSInteger)userID onSuccess:(void (^)(LEUser *))success onFailure:(void (^)(NSError *, NSInteger))failure{
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
