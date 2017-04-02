@@ -223,11 +223,10 @@ static CGFloat height = 4;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
    
-    
     switch (indexPath.section) {
         case 0: return 120;
         case 1: return 50;
-        case 2: return 300;
+        case 2: return 220;
             
         default:
             break;
