@@ -93,10 +93,21 @@
     return collectionCell;
 }
 
+#pragma mark - UICollectionViewDelegate - 
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    LECounterCollctionCell *cell = (LECounterCollctionCell*)[collectionView cellForItemAtIndexPath:indexPath];
+    self.segueBlock(cell.segueType);
+    NSLog(@"SEGUETYPE: %u",cell.segueType);
+    
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
 }
+
+
 
 @end

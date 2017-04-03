@@ -15,7 +15,7 @@
 #import "LEPostCell.h"
 #import "LEPost.h"
 #import "LEWallImage.h"
-
+#import "LEFriendListController.h"
 
 static CGFloat height = 4;
 
@@ -31,6 +31,7 @@ static CGFloat height = 4;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.postsArray = [NSMutableArray array];
+   
     [self setNavigationBarStyle];
     
     [self getUserInfoWithCompletion:^(BOOL state) {
@@ -135,8 +136,8 @@ static CGFloat height = 4;
     
         profileCell.photo.layer.masksToBounds = YES;
         profileCell.photo.layer.cornerRadius = 32;
-        profileCell.photo.layer.borderWidth = 2;
-        profileCell.photo.layer.borderColor = [UIColor greenColor].CGColor;
+        profileCell.photo.layer.borderWidth = 1;
+        profileCell.photo.layer.borderColor = [UIColor whiteColor].CGColor;
     
         [profileCell setNeedsLayout];
 
@@ -174,10 +175,35 @@ static CGFloat height = 4;
                 
                 counterCell = [[LECounterCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:counterCellID];
                 
-                
             }
+        
+        __weak LEUserViewController *weakSelf = self;
         counterCell.currentUser = _currentUser;
+        counterCell.segueBlock = ^(CounterCellSegue type){
+            
+            switch (type) {
+                case CounterCellSegueFriends: case CounterCellSegueFollowers:{
+                    LEFriendListController  *flc = [weakSelf.storyboard instantiateViewControllerWithIdentifier:@"friendsList"];
+                    flc.userID = weakSelf.userID;
+                    flc.user   = weakSelf.currentUser;
+                    flc.friendsFollowers = type;
+                    
+                    [weakSelf.navigationController pushViewController:flc animated:YES];
+                    
+                     break;
+                }
+                
+                   
+                    
+                default:
+                    break;
+            }
+            
+        };
+    
         [counterCell.collectionView reloadData];
+        
+        
         
         return counterCell;
     }

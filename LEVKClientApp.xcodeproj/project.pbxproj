@@ -50,6 +50,11 @@
 		61D55F931E9172AE00DA881D /* LELike.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55F921E9172AE00DA881D /* LELike.m */; };
 		61D55F971E9178DB00DA881D /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 61D55F961E9178DB00DA881D /* images.png */; };
 		61D55F9B1E918F2500DA881D /* LEBarGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55F9A1E918F2500DA881D /* LEBarGradient.m */; };
+		61D55FA11E922F3800DA881D /* LEFriendListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55FA01E922F3800DA881D /* LEFriendListController.m */; };
+		61D55FA41E9239FD00DA881D /* UIColor+LEvkRedColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55FA31E9239FD00DA881D /* UIColor+LEvkRedColor.m */; };
+		61D55FA71E926CC900DA881D /* LEFriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55FA61E926CC900DA881D /* LEFriendListCell.m */; };
+		61D55FAC1E92D52600DA881D /* LESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55FAB1E92D52600DA881D /* LESideMenu.m */; };
+		61D55FAE1E92D5A300DA881D /* SideMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61D55FAD1E92D5A300DA881D /* SideMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +162,15 @@
 		61D55F961E9178DB00DA881D /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = images.png; path = Images/images.png; sourceTree = SOURCE_ROOT; };
 		61D55F991E918F2500DA881D /* LEBarGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEBarGradient.h; sourceTree = "<group>"; };
 		61D55F9A1E918F2500DA881D /* LEBarGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEBarGradient.m; sourceTree = "<group>"; };
+		61D55F9F1E922F3800DA881D /* LEFriendListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEFriendListController.h; sourceTree = "<group>"; };
+		61D55FA01E922F3800DA881D /* LEFriendListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEFriendListController.m; sourceTree = "<group>"; };
+		61D55FA21E9239FD00DA881D /* UIColor+LEvkRedColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LEvkRedColor.h"; sourceTree = "<group>"; };
+		61D55FA31E9239FD00DA881D /* UIColor+LEvkRedColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LEvkRedColor.m"; sourceTree = "<group>"; };
+		61D55FA51E926CC900DA881D /* LEFriendListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEFriendListCell.h; sourceTree = "<group>"; };
+		61D55FA61E926CC900DA881D /* LEFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEFriendListCell.m; sourceTree = "<group>"; };
+		61D55FAA1E92D52600DA881D /* LESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LESideMenu.h; sourceTree = "<group>"; };
+		61D55FAB1E92D52600DA881D /* LESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LESideMenu.m; sourceTree = "<group>"; };
+		61D55FAD1E92D5A300DA881D /* SideMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +207,10 @@
 				617250A41E85AC70001360C2 /* LELoginViewController.m */,
 				610CF0821E89623E003D7284 /* LEUserViewController.h */,
 				610CF0831E89623E003D7284 /* LEUserViewController.m */,
+				61D55F9F1E922F3800DA881D /* LEFriendListController.h */,
+				61D55FA01E922F3800DA881D /* LEFriendListController.m */,
+				61D55FAA1E92D52600DA881D /* LESideMenu.h */,
+				61D55FAB1E92D52600DA881D /* LESideMenu.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -221,11 +239,13 @@
 				610CF0861E8981D5003D7284 /* LEUserCell.h */,
 				610CF0871E8981D5003D7284 /* LEUserCell.m */,
 				610CF08E1E8ADDD4003D7284 /* LECounterCollctionCell.h */,
-				610CF0971E8C3705003D7284 /* LEPostCell.h */,
-				610CF0981E8C3705003D7284 /* LEPostCell.m */,
 				610CF08F1E8ADDD4003D7284 /* LECounterCollctionCell.m */,
 				610CF0911E8AE109003D7284 /* LECounterCell.h */,
 				610CF0921E8AE109003D7284 /* LECounterCell.m */,
+				610CF0971E8C3705003D7284 /* LEPostCell.h */,
+				610CF0981E8C3705003D7284 /* LEPostCell.m */,
+				61D55FA51E926CC900DA881D /* LEFriendListCell.h */,
+				61D55FA61E926CC900DA881D /* LEFriendListCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -282,6 +302,7 @@
 				610CF0811E8961D4003D7284 /* Models */,
 				610CF0801E8961C9003D7284 /* Controllers */,
 				6172503B1E8584F3001360C2 /* Main.storyboard */,
+				61D55FAD1E92D5A300DA881D /* SideMenu.xib */,
 				617250411E8584F3001360C2 /* Assets.xcassets */,
 				617250431E8584F3001360C2 /* LaunchScreen.storyboard */,
 				617250461E8584F3001360C2 /* Info.plist */,
@@ -388,6 +409,8 @@
 			children = (
 				61D55F991E918F2500DA881D /* LEBarGradient.h */,
 				61D55F9A1E918F2500DA881D /* LEBarGradient.m */,
+				61D55FA21E9239FD00DA881D /* UIColor+LEvkRedColor.h */,
+				61D55FA31E9239FD00DA881D /* UIColor+LEvkRedColor.m */,
 			);
 			name = Style;
 			sourceTree = "<group>";
@@ -505,6 +528,7 @@
 				617250421E8584F3001360C2 /* Assets.xcassets in Resources */,
 				6172503D1E8584F3001360C2 /* Main.storyboard in Resources */,
 				61D55F971E9178DB00DA881D /* images.png in Resources */,
+				61D55FAE1E92D5A300DA881D /* SideMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,14 +561,17 @@
 				6172508F1E859896001360C2 /* AFURLResponseSerialization.m in Sources */,
 				610CF0961E8AFC2B003D7284 /* LEUserCounters.m in Sources */,
 				617250401E8584F3001360C2 /* LEVKClientApp.xcdatamodeld in Sources */,
+				61D55FA11E922F3800DA881D /* LEFriendListController.m in Sources */,
 				6172503A1E8584F3001360C2 /* ViewController.m in Sources */,
 				610CF0931E8AE109003D7284 /* LECounterCell.m in Sources */,
 				61D55F9B1E918F2500DA881D /* LEBarGradient.m in Sources */,
 				610CF08B1E898F3C003D7284 /* LECity.m in Sources */,
+				61D55FA41E9239FD00DA881D /* UIColor+LEvkRedColor.m in Sources */,
 				617250A81E85B07D001360C2 /* LEAuthorizedViewController.m in Sources */,
 				6172508B1E859896001360C2 /* AFHTTPSessionManager.m in Sources */,
 				617250901E859896001360C2 /* AFURLSessionManager.m in Sources */,
 				617250A51E85AC70001360C2 /* LELoginViewController.m in Sources */,
+				61D55FA71E926CC900DA881D /* LEFriendListCell.m in Sources */,
 				617250941E859896001360C2 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				6172509C1E8598E5001360C2 /* LEServerManager.m in Sources */,
 				61D55F931E9172AE00DA881D /* LELike.m in Sources */,
@@ -560,6 +587,7 @@
 				617250981E859896001360C2 /* UIRefreshControl+AFNetworking.m in Sources */,
 				617250991E859896001360C2 /* UIWebView+AFNetworking.m in Sources */,
 				610CF0901E8ADDD4003D7284 /* LECounterCollctionCell.m in Sources */,
+				61D55FAC1E92D52600DA881D /* LESideMenu.m in Sources */,
 				6172508E1E859896001360C2 /* AFURLRequestSerialization.m in Sources */,
 				617250911E859896001360C2 /* AFAutoPurgingImageCache.m in Sources */,
 				617250921E859896001360C2 /* AFImageDownloader.m in Sources */,

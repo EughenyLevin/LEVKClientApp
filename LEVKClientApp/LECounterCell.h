@@ -20,7 +20,7 @@ typedef enum {
 @interface LECounterCell : UITableViewCell <UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (strong,nonatomic) LEUser *currentUser;
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-
+@property (weak, nonatomic)  IBOutlet UICollectionView *collectionView;
+@property (copy,nonatomic)   void(^segueBlock)(CounterCellSegue row);
 
 @end

@@ -37,4 +37,16 @@ typedef void(^LESuccessBlock)(LEUser *user);
                   onSuccess:(void(^)(LEUser *user))success
                   onFailure:(void(^)(NSError *error, NSInteger errorCode))failure;
 
+
+-(void)getFriendsForUserWithID:(NSInteger )userID
+                    withOffset:(NSInteger)offset
+                     withCount:(NSInteger)count
+                     onSuccess:(void(^)(NSArray *friends,NSInteger count))success
+                     onFailure:(void(^)(NSError *error))failure;
+
+
+-(void)getFollowersForUser:(NSInteger)userID withOffset:(NSInteger)offset withCount:(NSInteger)count
+                 onSuccess:(void(^)(NSArray *success))success
+                 onFailure:(void(^)(NSError *error))failure;
+
 @end

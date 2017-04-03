@@ -125,11 +125,6 @@ static NSString *responseKey = @"response";
                          
                          NSArray *itemsArray = [responseDict objectForKey:@"items"];
                          NSArray *usersArray = [responseDict objectForKey:@"profiles"];
-                         NSArray *likesArray = [responseDict objectForKey:@"likes"];
-                        
-                         for (NSDictionary *d in itemsArray) {
-                             NSLog(@"%@ sdfgnfdlglfdgndlfgndf",d);
-                         }
                          
                          NSMutableArray* posts = [NSMutableArray array];
                          
@@ -209,6 +204,84 @@ static NSString *responseKey = @"response";
                      }];
     
     
+}
+
+
+-(void)getFriendsForUserWithID:(NSInteger)userID withOffset:(NSInteger)offset
+                     withCount:(NSInteger)count
+                     onSuccess:(void (^)(NSArray *, NSInteger))success
+                     onFailure:(void (^)(NSError *))failure{
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            @(userID), @"user_id",
+                            @"name"  , @"order",
+                            @(count) , @"count",
+                            @(offset), @"offset",
+                            @"photo_100, online"  , @"fields",
+                            @5.8, @"v",
+                            nil];
+    
+    [self.sessionManager GET:@"friends.get"
+        parameters:params progress:nil
+        success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            NSDictionary *responseDict  = [responseObject objectForKey:@"response"];
+            NSInteger friendsCount = [[responseDict objectForKey:@"count"]integerValue];
+            NSArray* responseArray       = [responseDict objectForKey:@"items"];
+            NSMutableArray *friendsArray = [NSMutableArray array];
+          
+            for (NSDictionary *friendData in responseArray) {
+                
+                LEUser *friend = [[LEUser alloc]initWithDict:friendData];
+                [friendsArray addObject:friend];
+            }
+            if (success) {
+                success(friendsArray,friendsCount);
+            }
+            
+            
+            
+        }
+        failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+        }];
+    
+}
+
+-(void)getFollowersForUser:(NSInteger)userID
+                withOffset:(NSInteger)offset
+                 withCount:(NSInteger)count
+                 onSuccess:(void (^)(NSArray *))success
+                 onFailure:(void (^)(NSError *))failure{
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            @(userID), @"user_id",
+                            @"name"  , @"order",
+                            @(count) , @"count",
+                            @(offset), @"offset",
+                            @"photo_100, online",  @"fields",
+                            nil];
+    [self.sessionManager GET:@"users.getFollowers" parameters:params progress:nil
+                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                         
+                         NSLog(@"Folllowers: %@",responseObject);
+                         
+                         NSDictionary *responseDict  = [responseObject objectForKey:@"response"];
+                         NSArray      *responseArray = [responseDict objectForKey:@"items"];
+                         NSMutableArray *followers = [NSMutableArray array];
+                         for (NSDictionary *userInfo in responseArray) {
+                             
+                             LEUser *follower = [[LEUser alloc]initWithDict:userInfo];
+                             [followers addObject:follower];
+                         }
+                         if (success) {
+                             success(followers);
+                         }
+                         
+                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                         
+                                                  
+                     }];
 }
 
 @end
