@@ -49,4 +49,12 @@ typedef void(^LESuccessBlock)(LEUser *user);
                  onSuccess:(void(^)(NSArray *success))success
                  onFailure:(void(^)(NSError *error))failure;
 
+-(void)getGroupsForUser:(NSInteger)userID
+                withOffset:(NSInteger)offset
+                withCount:(NSInteger)count
+                onSuccess:(void(^)(NSArray* groups))success
+              onFailure:(void(^)(NSError *error))failure;
+
+;
+
 @end

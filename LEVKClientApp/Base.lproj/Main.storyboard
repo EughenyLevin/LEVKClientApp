@@ -343,6 +343,34 @@
             </objects>
             <point key="canvasLocation" x="2510" y="65"/>
         </scene>
+        <!--Groups Controller-->
+        <scene sceneID="bzE-Og-zQx">
+            <objects>
+                <tableViewController storyboardIdentifier="groups" id="OvT-eT-GeP" customClass="LEGroupsController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ufe-pc-EMC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" id="0Gc-k7-lwD">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Gc-k7-lwD" id="3kW-tF-1Rg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OvT-eT-GeP" id="TOE-CA-4Cf"/>
+                            <outlet property="delegate" destination="OvT-eT-GeP" id="JXa-nx-DXv"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vn6-Ta-JUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3210" y="65"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="nh1-ko-duz">
             <objects>

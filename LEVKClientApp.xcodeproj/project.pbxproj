@@ -48,6 +48,7 @@
 		617250A81E85B07D001360C2 /* LEAuthorizedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250A71E85B07D001360C2 /* LEAuthorizedViewController.m */; };
 		6185476B1E939934008A05F8 /* LEMenuCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6185476A1E939934008A05F8 /* LEMenuCoordinator.m */; };
 		6185476E1E939941008A05F8 /* LESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6185476D1E939941008A05F8 /* LESideMenu.m */; };
+		618547711E93DC01008A05F8 /* LEGroupsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618547701E93DC01008A05F8 /* LEGroupsController.m */; };
 		61D55F901E914C1800DA881D /* LEParentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55F8F1E914C1800DA881D /* LEParentObject.m */; };
 		61D55F931E9172AE00DA881D /* LELike.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55F921E9172AE00DA881D /* LELike.m */; };
 		61D55F971E9178DB00DA881D /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 61D55F961E9178DB00DA881D /* images.png */; };
@@ -160,6 +161,8 @@
 		6185476A1E939934008A05F8 /* LEMenuCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMenuCoordinator.m; sourceTree = "<group>"; };
 		6185476C1E939941008A05F8 /* LESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LESideMenu.h; sourceTree = "<group>"; };
 		6185476D1E939941008A05F8 /* LESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LESideMenu.m; sourceTree = "<group>"; };
+		6185476F1E93DC01008A05F8 /* LEGroupsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGroupsController.h; sourceTree = "<group>"; };
+		618547701E93DC01008A05F8 /* LEGroupsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGroupsController.m; sourceTree = "<group>"; };
 		61D55F8E1E914C1800DA881D /* LEParentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEParentObject.h; sourceTree = "<group>"; };
 		61D55F8F1E914C1800DA881D /* LEParentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEParentObject.m; sourceTree = "<group>"; };
 		61D55F911E9172AE00DA881D /* LELike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LELike.h; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 				610CF0831E89623E003D7284 /* LEUserViewController.m */,
 				61D55F9F1E922F3800DA881D /* LEFriendListController.h */,
 				61D55FA01E922F3800DA881D /* LEFriendListController.m */,
+				6185476F1E93DC01008A05F8 /* LEGroupsController.h */,
+				618547701E93DC01008A05F8 /* LEGroupsController.m */,
 				61D55FB21E936B8200DA881D /* SideMenu */,
 			);
 			name = Controllers;
@@ -595,6 +600,7 @@
 				6185476E1E939941008A05F8 /* LESideMenu.m in Sources */,
 				617250971E859896001360C2 /* UIProgressView+AFNetworking.m in Sources */,
 				6172508C1E859896001360C2 /* AFNetworkReachabilityManager.m in Sources */,
+				618547711E93DC01008A05F8 /* LEGroupsController.m in Sources */,
 				61D55FB11E936B7B00DA881D /* LESideMenuData.m in Sources */,
 				617250341E8584F3001360C2 /* main.m in Sources */,
 				610CF0991E8C3705003D7284 /* LEPostCell.m in Sources */,

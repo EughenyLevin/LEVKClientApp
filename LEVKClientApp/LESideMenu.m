@@ -9,6 +9,7 @@
 #import "LESideMenu.h"
 #import "LESideMenuData.h"
 #import "UIImageView+AFNetworking.h"
+#import "LEGroupsController.h"
 
 @interface LESideMenu ()
 @property (weak, nonatomic) IBOutlet UITableView *table;
@@ -38,7 +39,7 @@
 {
    static NSString *cellID = @"menuCell";
     
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
         cell  = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
@@ -52,6 +53,19 @@
     return 1;
 }
 
+#pragma mark -UITableViewDelegate -
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"Select: %ld",indexPath.row);
+    if (indexPath.row == 2) {
+        LEGroupsController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"groups"];
+        vc.user = _user;
+        vc.userID = _userID;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -53,6 +53,7 @@ static NSInteger cornerRadius = 10;
     if (_sideMenuVC == nil) {
         self.sideMenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"menu"];
         self.sideMenuVC.user = self.userVC.currentUser;
+        self.sideMenuVC.userID = self.userId;
         [self.view addSubview:_sideMenuVC.view];
         [self addChildViewController:_sideMenuVC];
         [_sideMenuVC didMoveToParentViewController:self];

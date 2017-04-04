@@ -79,6 +79,7 @@ static NSString *responseKey = @"response";
         self.token = token;
         
         NSInteger ID = token.userID;
+        NSLog(@"ServerID: %@",self.token.token);
         self.authorizedUserID = ID;
         
         if (token) {
@@ -256,15 +257,14 @@ static NSString *responseKey = @"response";
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             @(userID), @"user_id",
-                            @"name"  , @"order",
+                    
                             @(count) , @"count",
                             @(offset), @"offset",
                             @"photo_100, online",  @"fields",
                             nil];
-    [self.sessionManager GET:@"users.getFollowers" parameters:params progress:nil
+                [self.sessionManager GET:@"users.getFollowers" parameters:params progress:nil
+     
                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                         
-                         NSLog(@"Folllowers: %@",responseObject);
                          
                          NSDictionary *responseDict  = [responseObject objectForKey:@"response"];
                          NSArray      *responseArray = [responseDict objectForKey:@"items"];
@@ -283,5 +283,35 @@ static NSString *responseKey = @"response";
                                                   
                      }];
 }
+
+-(void)getGroupsForUser:(NSInteger)userID withOffset:(NSInteger)offset withCount:(NSInteger)count onSuccess:(void (^)(NSArray *))success
+              onFailure:(void (^)(NSError *))failure{
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            @(userID), @"user_id",
+                            self.token.token,           @"access_token",
+                            @(count) , @"count",
+                            @(offset), @"offset",
+                            @"name, photo_100, id, screen_name, photo_50"    ,@"fields",
+                             @5.6, @"v"
+                            , nil];
+    
+    [_sessionManager GET:@"groups.get" parameters:params
+        progress:nil
+        success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            NSLog(@"%@",responseObject);
+            
+            
+        }
+     
+                 failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    
+            NSLog(@"%@",[error localizedDescription]);
+        
+        }];
+    
+}
+
 
 @end
