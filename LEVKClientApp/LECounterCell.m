@@ -29,7 +29,7 @@
              andType:(CounterCellSegue*)type
         forIndexPath:(NSIndexPath*)indexPath{
     
-    NSArray *titles = @[@"Friends",@"Subscribers"];
+    NSArray *titles = @[@"Friends",@"Followers",@"Groups"];
     
     NSInteger index;
     
@@ -48,6 +48,12 @@
             *count = [NSString stringWithFormat:@"%ld",self.currentUser.counters.followers];
             *type  = CounterCellSegueFollowers;
             break;
+        case 2:
+            
+            index = indexPath.item;
+            *count = [NSString stringWithFormat:@"%ld",self.currentUser.counters.groups];
+            break;
+            
             
         default:
             break;
@@ -67,7 +73,8 @@
     NSInteger count = 0;
     self.currentUser.counters.friends?   count++ : count;
     self.currentUser.counters.followers? count++ : count;
-    NSLog(@"Count: %ld", count);
+    self.currentUser.counters.groups?    count++ : count;
+
     return count;
 }
 

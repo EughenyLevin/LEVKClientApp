@@ -9,11 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LEUser.h"
 
-@protocol LESideMenuDelegate <NSObject>
 
--(void)rowSelectedAtIndex:(NSInteger)row;
-
-@end
 
 
 @interface LESideMenu : UIViewController<UITableViewDelegate,UITableViewDataSource>

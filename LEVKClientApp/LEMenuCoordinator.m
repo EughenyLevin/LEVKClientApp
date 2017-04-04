@@ -140,8 +140,19 @@ static NSInteger cornerRadius = 10;
     self.navigationController.navigationBar.tintColor = barTintColor;
     self.navigationController.navigationBar.backgroundColor =  [UIColor redColor];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(onMenu)];
     
+    NSString *butImage =  [[NSBundle mainBundle]pathForResource:@"arrow" ofType:@"png"];
+    UIImage *image = [UIImage imageWithContentsOfFile:butImage];
+
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button addTarget:self action:@selector(onMenu) forControlEvents:UIControlEventTouchUpInside]; //adding action
+    [button setBackgroundImage:image forState:UIControlStateNormal];
+    button.frame = CGRectMake(0 ,0,35,35);
+   
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.leftBarButtonItem = barButton;
+   
+   
 }
 
 

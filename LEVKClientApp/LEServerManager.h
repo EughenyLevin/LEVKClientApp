@@ -57,4 +57,12 @@ typedef void(^LESuccessBlock)(LEUser *user);
 
 ;
 
+-(void)getNewsForUser:(NSInteger)userID
+             withOffset:(NSInteger)offset
+              withCount:(NSInteger)count
+              onSuccess:(void(^)(NSArray* news))success
+              onFailure:(void(^)(NSError *error))failure;
+
+
+
 @end

@@ -14,7 +14,7 @@
 #import "LECity.h"
 #import "LEUserCounters.h"
 #import "LEPost.h"
-
+#import "LENewsPost.h"
 
 static NSString *responseKey = @"response";
 
@@ -50,8 +50,8 @@ static NSString *responseKey = @"response";
     }
     return self;
 }
-/*
--(void)getUserWithID:(NSInteger)userID onSuccess:(void (^)(LEUser *))success onFailure:(void (^)(NSError *))failure{
+
+-(void)getUserWithID:(NSInteger)userID onSuccess:(void (^)(LEUser *))success onFailure:(void (^)(NSError *))failure{   //unnecessary
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             @(userID),   "@user_ids",
@@ -71,7 +71,7 @@ static NSString *responseKey = @"response";
     
     
 }
- */
+
 -(void)authoriseOnScreen:(UIViewController *)screen onCompletion:(void (^)(NSInteger))handler{
     
     LELoginViewController *vc = [[LELoginViewController alloc] initWithcompletion:^(LEAccessToken *token) {
@@ -100,7 +100,7 @@ static NSString *responseKey = @"response";
     
 }
 
-///////////////////////////////////--User page--////////////////////////////////////////////////
+#pragma mark - User page - 
 
 -(void)getWallForUserID:(NSInteger)ID withOffset:(NSInteger)offset withCount:(NSInteger)count onSuccess:(void (^)(NSArray *, NSInteger))success onFailure:(void (^)(NSError *))failure{
     
@@ -288,13 +288,12 @@ static NSString *responseKey = @"response";
               onFailure:(void (^)(NSError *))failure{
     
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-                            @(userID), @"user_id",
+                            @(userID), @"user_ids",
                             self.token.token,           @"access_token",
                             @(count) , @"count",
                             @(offset), @"offset",
                             @"name, photo_100, id, screen_name, photo_50"    ,@"fields",
-                             @5.6, @"v"
-                            , nil];
+                            nil];
     
     [_sessionManager GET:@"groups.get" parameters:params
         progress:nil
@@ -310,6 +309,48 @@ static NSString *responseKey = @"response";
             NSLog(@"%@",[error localizedDescription]);
         
         }];
+    
+}
+
+-(void)getNewsForUser:(NSInteger)userID withOffset:(NSInteger)offset
+            withCount:(NSInteger)count
+            onSuccess:(void (^)(NSArray *))success
+            onFailure:(void (^)(NSError *))failure{
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            @(userID), @"user_id",
+                            @(count) , @"count",
+                            @(offset), @"offset",
+                            self.token.token, @"access_token",
+                            @"items", @"fields"
+                            , nil];
+    [self.sessionManager GET:@"newsfeed.get" parameters:params
+           progress:nil
+           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+               
+               NSDictionary *responseDict = [responseObject objectForKey:@"response"];
+               NSLog(@"%@",responseDict);
+               NSArray *groupsArray = [responseDict objectForKey:@"groups"];
+              // NSArray *itemsArray  = [responseDict objectForKey:@"items"];
+               NSMutableArray *posts = [NSMutableArray array];
+          
+               for (NSDictionary *dict in groupsArray) {
+                   LENewsPost *post = [[LENewsPost alloc]initWithData:dict];
+                 
+                   [posts addObject:post];
+               }
+               
+               
+               if (success) {
+                   success(posts);
+               }
+               
+               
+               
+}          failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    
+    
+}];
     
 }
 

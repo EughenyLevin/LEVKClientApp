@@ -16,7 +16,7 @@
         
         self.friends   = [[data objectForKey:@"friends"]integerValue];
         self.followers = [[data objectForKey:@"followers"]integerValue];
-        
+        self.groups    = [[data objectForKey:@"groups"]integerValue];
     }
     
     return self;

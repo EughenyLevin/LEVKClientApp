@@ -8,23 +8,30 @@
 
 #import "LEGroupsController.h"
 #import "LEServerManager.h"
-@interface LEGroupsController ()
+#import "LENewsPost.h"
+#import "UIImageView+AFNetworking.h"
+#import "LENewsPostCell.h"
 
+@interface LEGroupsController ()
+@property (strong,nonatomic) NSMutableArray *newsArray;
 @end
 
 @implementation LEGroupsController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.newsArray = [NSMutableArray array];
     [self  getGroupsGromServer];
-    
 }
 
 #pragma mark - Server Methods -
 
 -(void)getGroupsGromServer{
     
-        [[LEServerManager sharedManager]getGroupsForUser:_userID withOffset:0 withCount:5 onSuccess:^(NSArray *groups) {
+        [[LEServerManager sharedManager]getNewsForUser:_userID withOffset:_newsArray.count withCount:10 onSuccess:^(NSArray *news) {
+            
+            [_newsArray addObjectsFromArray:news];
+            [self.tableView reloadData];
             
         } onFailure:^(NSError *error) {
             
@@ -40,19 +47,24 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+   
+    return _newsArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
    
     static NSString *cellID = @"groupCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    LENewsPostCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell = [[LENewsPostCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
         
     }
-    cell.textLabel.text  = @"grops here:";
+    LENewsPost *post = [_newsArray objectAtIndex:indexPath.row];
+    NSURL *imageURL = post.imageURL;
+    NSLog(@"URL: %@",imageURL);
+    cell.author.text  = post.groupName;
+    [cell.authorImage setImageWithURL:imageURL];
     
     return cell;
 }

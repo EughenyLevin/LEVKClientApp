@@ -49,6 +49,10 @@
 		6185476B1E939934008A05F8 /* LEMenuCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6185476A1E939934008A05F8 /* LEMenuCoordinator.m */; };
 		6185476E1E939941008A05F8 /* LESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6185476D1E939941008A05F8 /* LESideMenu.m */; };
 		618547711E93DC01008A05F8 /* LEGroupsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618547701E93DC01008A05F8 /* LEGroupsController.m */; };
+		618547741E940B36008A05F8 /* LENewsPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 618547731E940B36008A05F8 /* LENewsPost.m */; };
+		618547771E941FB4008A05F8 /* LENewsPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 618547761E941FB4008A05F8 /* LENewsPostCell.m */; };
+		6185477F1E9433DC008A05F8 /* userinfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6185477E1E9433DC008A05F8 /* userinfo.png */; };
+		618547811E94344A008A05F8 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 618547801E94344A008A05F8 /* arrow.png */; };
 		61D55F901E914C1800DA881D /* LEParentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55F8F1E914C1800DA881D /* LEParentObject.m */; };
 		61D55F931E9172AE00DA881D /* LELike.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55F921E9172AE00DA881D /* LELike.m */; };
 		61D55F971E9178DB00DA881D /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 61D55F961E9178DB00DA881D /* images.png */; };
@@ -163,6 +167,12 @@
 		6185476D1E939941008A05F8 /* LESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LESideMenu.m; sourceTree = "<group>"; };
 		6185476F1E93DC01008A05F8 /* LEGroupsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEGroupsController.h; sourceTree = "<group>"; };
 		618547701E93DC01008A05F8 /* LEGroupsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEGroupsController.m; sourceTree = "<group>"; };
+		618547721E940B36008A05F8 /* LENewsPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LENewsPost.h; sourceTree = "<group>"; };
+		618547731E940B36008A05F8 /* LENewsPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LENewsPost.m; sourceTree = "<group>"; };
+		618547751E941FB4008A05F8 /* LENewsPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LENewsPostCell.h; sourceTree = "<group>"; };
+		618547761E941FB4008A05F8 /* LENewsPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LENewsPostCell.m; sourceTree = "<group>"; };
+		6185477E1E9433DC008A05F8 /* userinfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = userinfo.png; path = Images/userinfo.png; sourceTree = SOURCE_ROOT; };
+		618547801E94344A008A05F8 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = ../../../../../../arrow.png; sourceTree = "<group>"; };
 		61D55F8E1E914C1800DA881D /* LEParentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEParentObject.h; sourceTree = "<group>"; };
 		61D55F8F1E914C1800DA881D /* LEParentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEParentObject.m; sourceTree = "<group>"; };
 		61D55F911E9172AE00DA881D /* LELike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LELike.h; sourceTree = "<group>"; };
@@ -252,6 +262,8 @@
 				610CF0921E8AE109003D7284 /* LECounterCell.m */,
 				610CF0971E8C3705003D7284 /* LEPostCell.h */,
 				610CF0981E8C3705003D7284 /* LEPostCell.m */,
+				618547751E941FB4008A05F8 /* LENewsPostCell.h */,
+				618547761E941FB4008A05F8 /* LENewsPostCell.m */,
 				61D55FA51E926CC900DA881D /* LEFriendListCell.h */,
 				61D55FA61E926CC900DA881D /* LEFriendListCell.m */,
 			);
@@ -265,6 +277,8 @@
 				610CF09E1E8C40F6003D7284 /* LEWallObject.m */,
 				610CF0A41E8C41FE003D7284 /* LEPost.h */,
 				610CF0A51E8C41FE003D7284 /* LEPost.m */,
+				618547721E940B36008A05F8 /* LENewsPost.h */,
+				618547731E940B36008A05F8 /* LENewsPost.m */,
 				61D55F911E9172AE00DA881D /* LELike.h */,
 				61D55F921E9172AE00DA881D /* LELike.m */,
 				610CF0A71E8C4A95003D7284 /* LEWallImage.h */,
@@ -407,6 +421,8 @@
 			isa = PBXGroup;
 			children = (
 				61D55F961E9178DB00DA881D /* images.png */,
+				6185477E1E9433DC008A05F8 /* userinfo.png */,
+				618547801E94344A008A05F8 /* arrow.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -545,9 +561,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				617250451E8584F3001360C2 /* LaunchScreen.storyboard in Resources */,
+				618547811E94344A008A05F8 /* arrow.png in Resources */,
 				617250421E8584F3001360C2 /* Assets.xcassets in Resources */,
 				6172503D1E8584F3001360C2 /* Main.storyboard in Resources */,
 				61D55F971E9178DB00DA881D /* images.png in Resources */,
+				6185477F1E9433DC008A05F8 /* userinfo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +603,7 @@
 				6172503A1E8584F3001360C2 /* ViewController.m in Sources */,
 				610CF0931E8AE109003D7284 /* LECounterCell.m in Sources */,
 				61D55F9B1E918F2500DA881D /* LEBarGradient.m in Sources */,
+				618547741E940B36008A05F8 /* LENewsPost.m in Sources */,
 				610CF08B1E898F3C003D7284 /* LECity.m in Sources */,
 				61D55FA41E9239FD00DA881D /* UIColor+LEvkRedColor.m in Sources */,
 				617250A81E85B07D001360C2 /* LEAuthorizedViewController.m in Sources */,
@@ -608,6 +627,7 @@
 				617250961E859896001360C2 /* UIImageView+AFNetworking.m in Sources */,
 				617250951E859896001360C2 /* UIButton+AFNetworking.m in Sources */,
 				617250981E859896001360C2 /* UIRefreshControl+AFNetworking.m in Sources */,
+				618547771E941FB4008A05F8 /* LENewsPostCell.m in Sources */,
 				617250991E859896001360C2 /* UIWebView+AFNetworking.m in Sources */,
 				610CF0901E8ADDD4003D7284 /* LECounterCollctionCell.m in Sources */,
 				6172508E1E859896001360C2 /* AFURLRequestSerialization.m in Sources */,

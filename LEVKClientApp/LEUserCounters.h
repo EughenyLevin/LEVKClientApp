@@ -12,6 +12,7 @@
 
 @property (assign,nonatomic) NSInteger followers;
 @property (assign, nonatomic) NSInteger friends;
+@property (assign, nonatomic) NSInteger groups;
 
 -(LEUserCounters*)initWithData:(NSDictionary*)data;
 

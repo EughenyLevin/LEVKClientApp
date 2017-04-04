@@ -12,8 +12,8 @@
 typedef enum {
     
     CounterCellSegueFriends,
-    CounterCellSegueFollowers
-    
+    CounterCellSegueFollowers,
+    CounterCellSegueGroups
     
 }CounterCellSegue;
 
