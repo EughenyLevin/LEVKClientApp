@@ -10,19 +10,21 @@
 #import "LEServerManager.h"
 #import "LEUserCell.h"
 #import "UIImageView+AFNetworking.h"
-#import "LEUser.h"
 #import "LECounterCell.h"
 #import "LEPostCell.h"
 #import "LEPost.h"
 #import "LEWallImage.h"
 #import "LEFriendListController.h"
+#import "LESideMenu.h"
+#import "LEMenuCoordinator.h"
 
-static CGFloat height = 4;
+static CGFloat   height = 4;
 
 @interface LEUserViewController ()
 
-@property (strong, nonatomic) LEUser* currentUser;
+
 @property (strong, nonatomic) NSMutableArray* postsArray;
+@property (strong,nonatomic)  LESideMenu *sideMenuVC;
 
 @end
 
@@ -30,9 +32,8 @@ static CGFloat height = 4;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     self.postsArray = [NSMutableArray array];
-   
-    [self setNavigationBarStyle];
     
     [self getUserInfoWithCompletion:^(BOOL state) {
       
@@ -42,10 +43,14 @@ static CGFloat height = 4;
     [self getWallWithCompletion:^(BOOL state) {
         
         if (state) {
-            [self.tableView setHidden:NO];
+           // [self.tableView setHidden:NO];
         }
     }];
-
+    NSLog(@"NAME %@",_currentUser.firstName);
+   // self.title = _currentUser.firstName;
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(onMenuButAction:)];
+    
   
   }
 
@@ -68,6 +73,7 @@ static CGFloat height = 4;
         onSuccess:^(LEUser *user) {
     
             self.currentUser = user;
+            self.title = user.firstName;
             [self.tableView reloadData];
             
             if (completion) {
@@ -192,8 +198,6 @@ static CGFloat height = 4;
                     
                      break;
                 }
-                
-                   
                     
                 default:
                     break;
@@ -275,16 +279,28 @@ static CGFloat height = 4;
     
     
 }
-#pragma mark - UINavigationBar gradient -
 
+#pragma mark - SideMenu - 
 
--(void)setNavigationBarStyle{
+-(void)onMenuButAction:(id)sender{
     
-    UIColor *barTintColor = [UIColor colorWithRed:64/256 green:86/256 blue:106/256 alpha:1];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationController.navigationBar.tintColor = barTintColor;
-    self.navigationController.navigationBar.backgroundColor =  [UIColor redColor];
 }
+
+-(void)showSideMenu{
+
+
+    
+}
+
+-(void)moveToOriginalPosition{
+    
+    
+}
+
+
+
+
+
 
 
 @end

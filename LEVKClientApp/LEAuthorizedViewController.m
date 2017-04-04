@@ -9,6 +9,7 @@
 #import "LEAuthorizedViewController.h"
 #import "LEServerManager.h"
 #import "LEUserViewController.h"
+#import "LEMenuCoordinator.h"
 @interface LEAuthorizedViewController ()
 
 @end
@@ -29,10 +30,14 @@
         
         //self.r.leftViewController = nil;
 
-        LEUserViewController *userVc = [self.storyboard instantiateViewControllerWithIdentifier:@"fullInfoVC"];
-        userVc.userID = userID;
+        //LEUserViewController *userVc = [self.storyboard instantiateViewControllerWithIdentifier:@"fullInfoVC"];
+        //userVc.userID = userID;
         
-         [self.navigationController setViewControllers:@[userVc] animated:YES];
+        LEMenuCoordinator *menuCoordinator = [self.storyboard instantiateViewControllerWithIdentifier:@"coordinator"];
+        menuCoordinator.userId = userID;
+        [self.navigationController setViewControllers:@[menuCoordinator] animated:YES];
+        
+      //   [self.navigationController setViewControllers:@[userVc] animated:YES];
         
     }];
     

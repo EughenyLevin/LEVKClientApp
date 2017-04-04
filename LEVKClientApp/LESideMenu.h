@@ -2,20 +2,15 @@
 //  LESideMenu.h
 //  LEVKClientApp
 //
-//  Created by Evgheny on 03.04.17.
+//  Created by Evgheny on 04.04.17.
 //  Copyright © 2017 Eugheny_Levin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "LEUser.h"
 
-@protocol LELeftMenuDelegate <NSObject>
+@interface LESideMenu : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
--(void)movePanelRight;
-
-@end
-
-@interface LESideMenu : UIViewController
-
-
+@property (strong,nonatomic) LEUser *user;
 
 @end

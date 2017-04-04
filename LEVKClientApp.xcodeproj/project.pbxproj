@@ -46,6 +46,8 @@
 		617250A21E85AB2E001360C2 /* LEAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250A11E85AB2E001360C2 /* LEAccessToken.m */; };
 		617250A51E85AC70001360C2 /* LELoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250A41E85AC70001360C2 /* LELoginViewController.m */; };
 		617250A81E85B07D001360C2 /* LEAuthorizedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250A71E85B07D001360C2 /* LEAuthorizedViewController.m */; };
+		6185476B1E939934008A05F8 /* LEMenuCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6185476A1E939934008A05F8 /* LEMenuCoordinator.m */; };
+		6185476E1E939941008A05F8 /* LESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6185476D1E939941008A05F8 /* LESideMenu.m */; };
 		61D55F901E914C1800DA881D /* LEParentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55F8F1E914C1800DA881D /* LEParentObject.m */; };
 		61D55F931E9172AE00DA881D /* LELike.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55F921E9172AE00DA881D /* LELike.m */; };
 		61D55F971E9178DB00DA881D /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 61D55F961E9178DB00DA881D /* images.png */; };
@@ -53,8 +55,7 @@
 		61D55FA11E922F3800DA881D /* LEFriendListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55FA01E922F3800DA881D /* LEFriendListController.m */; };
 		61D55FA41E9239FD00DA881D /* UIColor+LEvkRedColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55FA31E9239FD00DA881D /* UIColor+LEvkRedColor.m */; };
 		61D55FA71E926CC900DA881D /* LEFriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55FA61E926CC900DA881D /* LEFriendListCell.m */; };
-		61D55FAC1E92D52600DA881D /* LESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55FAB1E92D52600DA881D /* LESideMenu.m */; };
-		61D55FAE1E92D5A300DA881D /* SideMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61D55FAD1E92D5A300DA881D /* SideMenu.xib */; };
+		61D55FB11E936B7B00DA881D /* LESideMenuData.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D55FB01E936B7B00DA881D /* LESideMenuData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +156,10 @@
 		617250A41E85AC70001360C2 /* LELoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LELoginViewController.m; sourceTree = "<group>"; };
 		617250A61E85B07D001360C2 /* LEAuthorizedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEAuthorizedViewController.h; sourceTree = "<group>"; };
 		617250A71E85B07D001360C2 /* LEAuthorizedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEAuthorizedViewController.m; sourceTree = "<group>"; };
+		618547691E939934008A05F8 /* LEMenuCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMenuCoordinator.h; sourceTree = "<group>"; };
+		6185476A1E939934008A05F8 /* LEMenuCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMenuCoordinator.m; sourceTree = "<group>"; };
+		6185476C1E939941008A05F8 /* LESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LESideMenu.h; sourceTree = "<group>"; };
+		6185476D1E939941008A05F8 /* LESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LESideMenu.m; sourceTree = "<group>"; };
 		61D55F8E1E914C1800DA881D /* LEParentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEParentObject.h; sourceTree = "<group>"; };
 		61D55F8F1E914C1800DA881D /* LEParentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEParentObject.m; sourceTree = "<group>"; };
 		61D55F911E9172AE00DA881D /* LELike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LELike.h; sourceTree = "<group>"; };
@@ -168,9 +173,8 @@
 		61D55FA31E9239FD00DA881D /* UIColor+LEvkRedColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LEvkRedColor.m"; sourceTree = "<group>"; };
 		61D55FA51E926CC900DA881D /* LEFriendListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEFriendListCell.h; sourceTree = "<group>"; };
 		61D55FA61E926CC900DA881D /* LEFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEFriendListCell.m; sourceTree = "<group>"; };
-		61D55FAA1E92D52600DA881D /* LESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LESideMenu.h; sourceTree = "<group>"; };
-		61D55FAB1E92D52600DA881D /* LESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LESideMenu.m; sourceTree = "<group>"; };
-		61D55FAD1E92D5A300DA881D /* SideMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenu.xib; sourceTree = "<group>"; };
+		61D55FAF1E936B7B00DA881D /* LESideMenuData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LESideMenuData.h; sourceTree = "<group>"; };
+		61D55FB01E936B7B00DA881D /* LESideMenuData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LESideMenuData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,8 +213,7 @@
 				610CF0831E89623E003D7284 /* LEUserViewController.m */,
 				61D55F9F1E922F3800DA881D /* LEFriendListController.h */,
 				61D55FA01E922F3800DA881D /* LEFriendListController.m */,
-				61D55FAA1E92D52600DA881D /* LESideMenu.h */,
-				61D55FAB1E92D52600DA881D /* LESideMenu.m */,
+				61D55FB21E936B8200DA881D /* SideMenu */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -302,7 +305,6 @@
 				610CF0811E8961D4003D7284 /* Models */,
 				610CF0801E8961C9003D7284 /* Controllers */,
 				6172503B1E8584F3001360C2 /* Main.storyboard */,
-				61D55FAD1E92D5A300DA881D /* SideMenu.xib */,
 				617250411E8584F3001360C2 /* Assets.xcassets */,
 				617250431E8584F3001360C2 /* LaunchScreen.storyboard */,
 				617250461E8584F3001360C2 /* Info.plist */,
@@ -413,6 +415,19 @@
 				61D55FA31E9239FD00DA881D /* UIColor+LEvkRedColor.m */,
 			);
 			name = Style;
+			sourceTree = "<group>";
+		};
+		61D55FB21E936B8200DA881D /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				61D55FAF1E936B7B00DA881D /* LESideMenuData.h */,
+				61D55FB01E936B7B00DA881D /* LESideMenuData.m */,
+				618547691E939934008A05F8 /* LEMenuCoordinator.h */,
+				6185476A1E939934008A05F8 /* LEMenuCoordinator.m */,
+				6185476C1E939941008A05F8 /* LESideMenu.h */,
+				6185476D1E939941008A05F8 /* LESideMenu.m */,
+			);
+			name = SideMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,7 +543,6 @@
 				617250421E8584F3001360C2 /* Assets.xcassets in Resources */,
 				6172503D1E8584F3001360C2 /* Main.storyboard in Resources */,
 				61D55F971E9178DB00DA881D /* images.png in Resources */,
-				61D55FAE1E92D5A300DA881D /* SideMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +573,7 @@
 				6172509F1E85992D001360C2 /* LEUser.m in Sources */,
 				610CF0A61E8C41FE003D7284 /* LEPost.m in Sources */,
 				6172508F1E859896001360C2 /* AFURLResponseSerialization.m in Sources */,
+				6185476B1E939934008A05F8 /* LEMenuCoordinator.m in Sources */,
 				610CF0961E8AFC2B003D7284 /* LEUserCounters.m in Sources */,
 				617250401E8584F3001360C2 /* LEVKClientApp.xcdatamodeld in Sources */,
 				61D55FA11E922F3800DA881D /* LEFriendListController.m in Sources */,
@@ -577,8 +592,10 @@
 				61D55F931E9172AE00DA881D /* LELike.m in Sources */,
 				617250371E8584F3001360C2 /* AppDelegate.m in Sources */,
 				610CF0881E8981D5003D7284 /* LEUserCell.m in Sources */,
+				6185476E1E939941008A05F8 /* LESideMenu.m in Sources */,
 				617250971E859896001360C2 /* UIProgressView+AFNetworking.m in Sources */,
 				6172508C1E859896001360C2 /* AFNetworkReachabilityManager.m in Sources */,
+				61D55FB11E936B7B00DA881D /* LESideMenuData.m in Sources */,
 				617250341E8584F3001360C2 /* main.m in Sources */,
 				610CF0991E8C3705003D7284 /* LEPostCell.m in Sources */,
 				617250931E859896001360C2 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -587,7 +604,6 @@
 				617250981E859896001360C2 /* UIRefreshControl+AFNetworking.m in Sources */,
 				617250991E859896001360C2 /* UIWebView+AFNetworking.m in Sources */,
 				610CF0901E8ADDD4003D7284 /* LECounterCollctionCell.m in Sources */,
-				61D55FAC1E92D52600DA881D /* LESideMenu.m in Sources */,
 				6172508E1E859896001360C2 /* AFURLRequestSerialization.m in Sources */,
 				617250911E859896001360C2 /* AFAutoPurgingImageCache.m in Sources */,
 				617250921E859896001360C2 /* AFImageDownloader.m in Sources */,
