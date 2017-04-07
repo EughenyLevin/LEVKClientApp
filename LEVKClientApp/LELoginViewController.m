@@ -17,7 +17,7 @@
 
 @implementation LELoginViewController
 
--(id)initWithcompletion:(void (^)(LEAccessToken *))completion{
+-(id)initWithcompletion:(void (^)(LEAccessToken *token))completion{
     if (self = [super init]) {
         
         self.completion = completion;

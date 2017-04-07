@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "LEUser.h"
 
-@interface LEFriendListController : UITableViewController
+@interface LEFriendListController : UIViewController<UITabBarDelegate,UITableViewDataSource,UIScrollViewDelegate>
 @property (assign,nonatomic) NSInteger userID;
 @property (strong,nonatomic) LEUser *user;
 @property (assign,nonatomic) BOOL friendsFollowers;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

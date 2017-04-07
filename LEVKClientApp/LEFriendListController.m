@@ -18,10 +18,11 @@
 @property (strong,nonatomic) NSMutableArray *friendsArray;
 @property (assign,nonatomic) NSInteger      friendsCount;
 @property (strong,nonatomic) NSMutableArray *followersArray;
+@property (assign,nonatomic) BOOL loadingCell;
 
 @end
 
-static NSInteger requestCount = 20;
+static NSInteger requestCount = 10;
 
 @implementation LEFriendListController
 
@@ -30,6 +31,7 @@ static NSInteger requestCount = 20;
     
     self.friendsArray   = [NSMutableArray array];
     self.followersArray = [NSMutableArray array];
+    self.loadingCell = YES;
     
     if (_friendsFollowers == 0)
         [self getFriendsList];
@@ -98,11 +100,32 @@ static NSInteger requestCount = 20;
                                                  withOffset:self.friendsArray.count
                                                   withCount:requestCount
                                                   onSuccess:^(NSArray *friends, NSInteger count) {
-    
-                    [self.friendsArray addObjectsFromArray:friends];
-                    self.friendsCount = count;
-                   
-                    [self.tableView reloadData];
+            
+                  //  self.friendsCount = count;
+                                                      [self.friendsArray addObjectsFromArray:friends];
+                                                      
+                                                      NSMutableArray *newPath  = [NSMutableArray array];
+                                                      
+                                                      for (int i = (int)(_friendsArray.count - friends.count); i<_friendsArray.count;i++) {
+                                                          
+                                                          [newPath addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+                                                          
+                                                      }
+                                                      dispatch_async(dispatch_get_main_queue(), ^{
+                                                      
+                                                          [self.tableView beginUpdates];
+                                                          
+                                                          [self.tableView insertRowsAtIndexPaths:newPath withRowAnimation:UITableViewRowAnimationRight];
+                                                          
+                                                          [self.tableView endUpdates];
+                                                      });
+
+                                                      
+                                                      
+                                                      
+                    self.loadingCell = NO;
+                                                      
+                  
                                                       
                                                       
 }                                               onFailure:^(NSError *error) {
@@ -121,7 +144,14 @@ static NSInteger requestCount = 20;
     
                                 [self.followersArray addObjectsFromArray:success];
                                 NSLog(@"Fllowers: %@",_followersArray);
-                                [self.tableView reloadData];
+                                
+                                dispatch_async(dispatch_get_main_queue(), ^{
+                                    
+                                      [self.tableView reloadData];
+                                    
+                                });
+                                
+                              
                                 
 }                           onFailure:^(NSError *error) {
     
@@ -129,6 +159,25 @@ static NSInteger requestCount = 20;
     
 }
 
+#pragma mark - UIScrollViewDelegate
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    if ((scrollView.contentOffset.y + scrollView.bounds.size.height) >=scrollView.contentSize.height) {
+        
+        if ((!_loadingCell)) {
+            if (self.friendsFollowers == 0) {
+                [self getFriendsList];
+            }
+            else [self getFollowersList];
+            
+            _loadingCell = YES;
+        }
+        
+    }
+    
+    
+}
 
 
 @end
