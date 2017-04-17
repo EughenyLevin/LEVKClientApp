@@ -10,6 +10,7 @@
 #import "LESideMenuData.h"
 #import "UIImageView+AFNetworking.h"
 #import "LEGroupsController.h"
+#import "LEFriendListController.h"
 
 @interface LESideMenu ()
 @property (weak, nonatomic) IBOutlet UITableView *table;
@@ -56,14 +57,30 @@
 #pragma mark -UITableViewDelegate -
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"Select: %ld",indexPath.row);
-    if (indexPath.row == 2) {
-        LEGroupsController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"groups"];
-        vc.user = _user;
-        vc.userID = _userID;
-        [self.navigationController pushViewController:vc animated:YES];
+    
+
+    switch (indexPath.row) {
+        case 0:
+        {
+            LEFriendListController *friendsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"friendsList"];
+            friendsVC.user = _user;
+            friendsVC.userID = _userID;
+            [self.navigationController pushViewController:friendsVC animated:YES];
+            
+        }
+            break;
+        case 2: {
+            LEGroupsController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"groups"];
+            vc.user = _user;
+            vc.userID = _userID;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        default:
+            break;
     }
     
+    
+   
     
 }
 

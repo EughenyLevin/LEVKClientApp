@@ -225,7 +225,7 @@ static NSString *responseKey = @"response";
     [self.sessionManager GET:@"friends.get"
         parameters:params progress:nil
         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            
+            NSLog(@"%@",responseObject);
             NSDictionary *responseDict  = [responseObject objectForKey:@"response"];
             NSInteger friendsCount = [[responseDict objectForKey:@"count"]integerValue];
             NSArray* responseArray       = [responseDict objectForKey:@"items"];

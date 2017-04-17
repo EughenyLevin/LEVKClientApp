@@ -17,6 +17,7 @@
 		610CF09F1E8C40F6003D7284 /* LEWallObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF09E1E8C40F6003D7284 /* LEWallObject.m */; };
 		610CF0A61E8C41FE003D7284 /* LEPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF0A51E8C41FE003D7284 /* LEPost.m */; };
 		610CF0A91E8C4A95003D7284 /* LEWallImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CF0A81E8C4A95003D7284 /* LEWallImage.m */; };
+		6139591A1EA1646D00F58E32 /* LESection.m in Sources */ = {isa = PBXBuildFile; fileRef = 613959191EA1646D00F58E32 /* LESection.m */; };
 		617250341E8584F3001360C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250331E8584F3001360C2 /* main.m */; };
 		617250371E8584F3001360C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250361E8584F3001360C2 /* AppDelegate.m */; };
 		6172503A1E8584F3001360C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617250391E8584F3001360C2 /* ViewController.m */; };
@@ -101,6 +102,8 @@
 		610CF0A51E8C41FE003D7284 /* LEPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEPost.m; sourceTree = "<group>"; };
 		610CF0A71E8C4A95003D7284 /* LEWallImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEWallImage.h; sourceTree = "<group>"; };
 		610CF0A81E8C4A95003D7284 /* LEWallImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEWallImage.m; sourceTree = "<group>"; };
+		613959181EA1646D00F58E32 /* LESection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LESection.h; sourceTree = "<group>"; };
+		613959191EA1646D00F58E32 /* LESection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LESection.m; sourceTree = "<group>"; };
 		6172502F1E8584F3001360C2 /* LEVKClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEVKClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		617250331E8584F3001360C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		617250351E8584F3001360C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 				610CF0941E8AFC2A003D7284 /* LEUserCounters.h */,
 				610CF0951E8AFC2A003D7284 /* LEUserCounters.m */,
 				6172509D1E85992D001360C2 /* LEUser.h */,
+				613959181EA1646D00F58E32 /* LESection.h */,
+				613959191EA1646D00F58E32 /* LESection.m */,
 				6172509E1E85992D001360C2 /* LEUser.m */,
 				610CF0A01E8C41C1003D7284 /* WallModels */,
 			);
@@ -614,6 +619,7 @@
 				617250941E859896001360C2 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				6172509C1E8598E5001360C2 /* LEServerManager.m in Sources */,
 				61D55F931E9172AE00DA881D /* LELike.m in Sources */,
+				6139591A1EA1646D00F58E32 /* LESection.m in Sources */,
 				617250371E8584F3001360C2 /* AppDelegate.m in Sources */,
 				610CF0881E8981D5003D7284 /* LEUserCell.m in Sources */,
 				6185476E1E939941008A05F8 /* LESideMenu.m in Sources */,
